@@ -3,13 +3,15 @@ module "test" {
 
   experiment_template_name = "dscott-test"
   availability_zone        = "us-east-1a"
-  subnet_vpc_id            = "vpc-0addae65e492b4587"
+  subnet_vpc_id            = "vpc-03bdf9b38e7e579f9"
+
   ec2_selected_tags = {
     "red-hat-managed" : "true",
-    "api.openshift.com/id" : "2eg24j3hej8djd5m9e0e6vgm7s07v11b"
+    "api.openshift.com/name" : "dscott-fis"
   }
   ebs_selected_tags = {
+
     "red-hat-managed" : "true"
-    "api.openshift.com/name" : "dscott"
+    "api.openshift.com/name" : "dscott-fis"
   }
 }
