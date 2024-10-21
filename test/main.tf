@@ -10,7 +10,6 @@ module "test" {
     "api.openshift.com/name" : "dscott-fis"
   }
   ebs_selected_tags = {
-
     "red-hat-managed" : "true"
     "api.openshift.com/name" : "dscott-fis"
   }
