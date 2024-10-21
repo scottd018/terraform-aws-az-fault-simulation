@@ -78,29 +78,9 @@ resource "aws_iam_role_policy_attachment" "fis_ec2_policy" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorEC2Access"
 }
 
-resource "aws_iam_role_policy_attachment" "fis_ecs_policy" {
-  role       = aws_iam_role.fis_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorECSAccess"
-}
-
-resource "aws_iam_role_policy_attachment" "fis_eks_policy" {
-  role       = aws_iam_role.fis_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorEKSAccess"
-}
-
 resource "aws_iam_role_policy_attachment" "fis_network_policy" {
   role       = aws_iam_role.fis_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorNetworkAccess"
-}
-
-resource "aws_iam_role_policy_attachment" "fis_rds_policy" {
-  role       = aws_iam_role.fis_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorRDSAccess"
-}
-
-resource "aws_iam_role_policy_attachment" "fis_ssm_policy" {
-  role       = aws_iam_role.fis_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorSSMAccess"
 }
 
 resource "aws_iam_role_policy_attachment" "fis_cloudwatch_policy" {
